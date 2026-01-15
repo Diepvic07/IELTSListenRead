@@ -1,0 +1,24 @@
+Skill,Problems,Type of question,Reason,Solution
+Reading,Có nhiều từ vựng không biết,Gap filling,Vốn từ vựng còn hạn chế,Học thêm từ vựng
+Reading,Không tìm thấy đoạn văn chứa đáp án trong bài,Gap filling,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+Reading,Không nắm vững ngữ pháp về từ loại,Gap filling,Chưa vững ngữ pháp / hiểu cấu trúc câu,Học cách đọc hiểu câu dài dựa vào ngữ pháp
+Reading,Có nhiều từ vựng không biết,Multiple choice,Vốn từ vựng còn hạn chế,Học thêm từ vựng
+Reading,Thấy các đáp án giống giống nhau,Multiple choice,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase","Học thêm từ vựng, Luyện nhận biết paraphrase"
+Reading,Đọc mà không hiểu ,Multiple choice,"Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu","Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+Reading,Không tìm thấy đoạn văn chứa đáp án trong bài,Multiple choice,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+Reading,Tốc độ đọc còn chậm,Matching heading,"Vốn từ vựng còn hạn chế, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Tăng cường luyện đọc"
+Reading,Đọc mà không hiểu ,Matching heading,"Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu","Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+Reading,Không hiểu được ý chính của đoạn văn,Matching heading,"Vốn từ vựng còn hạn chế, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Tăng cường luyện đọc"
+Reading,Không tìm thấy đoạn văn chứa đáp án trong bài,Matching names,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+Reading,Đọc mà không hiểu ,Matching names,"Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu","Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+Reading,Có nhiều từ vựng không biết,Matching names,Vốn từ vựng còn hạn chế,Học thêm từ vựng
+Reading,Thấy các đáp án giống giống nhau,Matching names,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase","Học thêm từ vựng, Luyện nhận biết paraphrase"
+Reading,Tốc độ đọc còn chậm,Which paragraph contains,"Vốn từ vựng còn hạn chế, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Tăng cường luyện đọc"
+Reading,Có nhiều từ vựng không biết,Which paragraph contains,Vốn từ vựng còn hạn chế,Học thêm từ vựng
+Reading,Thấy các đáp án giống giống nhau,Which paragraph contains,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase","Học thêm từ vựng, Luyện nhận biết paraphrase"
+Reading,Không tìm thấy đoạn văn chứa đáp án trong bài,Which paragraph contains,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+Reading,Tốc độ đọc còn chậm,Which paragraph contains,"Vốn từ vựng còn hạn chế, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Tăng cường luyện đọc"
+Reading,Đọc mà không hiểu ,Which paragraph contains,"Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu","Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+Reading,Có nhiều từ vựng không biết,TFNG,Vốn từ vựng còn hạn chế,Học thêm từ vựng
+Reading,Không phân biệt được False và Not Given,TFNG,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa thành thạo kỹ thuật giải đề","Học thêm từ vựng, Luyện nhận biết paraphrase, Luyện kỹ thuật giải đề"
+Reading,Không tìm thấy đoạn văn chứa đáp án trong bài,TFNG,"Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều","Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"

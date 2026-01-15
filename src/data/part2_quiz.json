@@ -1,0 +1,40 @@
+{
+    "part2": {
+        "title": "ĐIỂM MẠNH & YẾU CỦA BẠN KHI HỌC IELTS LISTENING/READING",
+        "questions": [
+            {
+                "id": "p2_q1",
+                "skill": "Listening",
+                "question_text": "Khi giải đề Listening, bạn hay gặp những vấn đề nào? (Chọn tất cả câu trả lời đúng với bạn)",
+                "type": "multi_select",
+                "options": [
+                    "Không quen nghe số điện thoại",
+                    "Không quen nghe đánh vần tên",
+                    "Không theo kịp tốc độ bài nói",
+                    "Có nhiều từ vựng không biết",
+                    "Nghe thấy từ khoá giống đáp án là chọn",
+                    "Thấy các đáp án giống giống nhau",
+                    "Nghe nhưng không hiểu",
+                    "Không xác định được các phương hướng bản đồ",
+                    "Không xác định được các vị trí trên bản đồ"
+                ]
+            },
+            {
+                "id": "p2_q2",
+                "skill": "Reading",
+                "question_text": "Khi giải đề Reading, bạn hay gặp những vấn đề nào? (Chọn tất cả câu trả lời đúng với bạn)",
+                "type": "multi_select",
+                "options": [
+                    "Có nhiều từ vựng không biết",
+                    "Không nắm vững ngữ pháp về từ loại",
+                    "Không tìm thấy đoạn văn chứa đáp án trong bài",
+                    "Thấy các đáp án giống giống nhau",
+                    "Đọc mà không hiểu",
+                    "Tốc độ đọc còn chậm",
+                    "Không hiểu được ý chính của đoạn văn",
+                    "Không phân biệt được False và Not Given"
+                ]
+            }
+        ]
+    }
+}

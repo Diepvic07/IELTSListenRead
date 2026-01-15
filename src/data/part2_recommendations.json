@@ -1,0 +1,257 @@
+{
+    "recommendations": {
+        "Listening": {
+            "Không quen nghe số điện thoại": [
+                {
+                    "question_type": "Gap filling, Part 1",
+                    "reason": "Chưa thành thạo kỹ thuật giải đề",
+                    "solution": "Luyện kỹ thuật giải đề"
+                }
+            ],
+            "Không quen nghe đánh vần tên": [
+                {
+                    "question_type": "Gap filling, Part 1",
+                    "reason": "Chưa thành thạo kỹ thuật giải đề",
+                    "solution": "Luyện kỹ thuật giải đề"
+                }
+            ],
+            "Không theo kịp tốc độ bài nói": [
+                {
+                    "question_type": "Gap filling, Part 1",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Map/Plan Labelling",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Matching Information",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Gap filling, Part 4",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                }
+            ],
+            "Có nhiều từ vựng không biết": [
+                {
+                    "question_type": "Gap filling, Part 1",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Map/Plan Labelling",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Matching Information",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Gap filling, Part 4",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                }
+            ],
+            "Nghe thấy từ khoá giống đáp án là chọn": [
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa biết tránh các dạng bẫy",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết các dạng bẫy"
+                },
+                {
+                    "question_type": "Matching Information",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa biết tránh các dạng bẫy",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết các dạng bẫy"
+                }
+            ],
+            "Thấy các đáp án giống giống nhau": [
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa biết tránh các dạng bẫy, Chưa thành thạo kỹ thuật giải đề",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết các dạng bẫy, Luyện kỹ thuật giải đề"
+                },
+                {
+                    "question_type": "Matching Information",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa biết tránh các dạng bẫy, Chưa thành thạo kỹ thuật giải đề",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết các dạng bẫy, Luyện kỹ thuật giải đề"
+                }
+            ],
+            "Nghe nhưng không hiểu": [
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Matching Information",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Gap filling, Part 4",
+                    "reason": "Chưa luyện nghe đủ nhiều, Vốn từ vựng còn hạn chế",
+                    "solution": "Luyện nghe nhiều hơn, Học thêm từ vựng"
+                }
+            ],
+            "Không xác định được các phương hướng bản đồ": [
+                {
+                    "question_type": "Map/Plan Labelling",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                }
+            ],
+            "Không xác định được các vị trí trên bản đồ": [
+                {
+                    "question_type": "Map/Plan Labelling",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                }
+            ]
+        },
+        "Reading": {
+            "Có nhiều từ vựng không biết": [
+                {
+                    "question_type": "Gap filling",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Matching names",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "Which paragraph contains",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                },
+                {
+                    "question_type": "TFNG",
+                    "reason": "Vốn từ vựng còn hạn chế",
+                    "solution": "Học thêm từ vựng"
+                }
+            ],
+            "Không tìm thấy đoạn văn chứa đáp án trong bài": [
+                {
+                    "question_type": "Gap filling",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+                },
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+                },
+                {
+                    "question_type": "Matching names",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+                },
+                {
+                    "question_type": "Which paragraph contains",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+                },
+                {
+                    "question_type": "TFNG",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase, Tăng cường luyện đọc"
+                }
+            ],
+            "Không nắm vững ngữ pháp về từ loại": [
+                {
+                    "question_type": "Gap filling",
+                    "reason": "Chưa vững ngữ pháp / hiểu cấu trúc câu",
+                    "solution": "Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+                }
+            ],
+            "Thấy các đáp án giống giống nhau": [
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase"
+                },
+                {
+                    "question_type": "Matching names",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase"
+                },
+                {
+                    "question_type": "Which paragraph contains",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase"
+                }
+            ],
+            "Đọc mà không hiểu": [
+                {
+                    "question_type": "Multiple choice",
+                    "reason": "Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu",
+                    "solution": "Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+                },
+                {
+                    "question_type": "Matching heading",
+                    "reason": "Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu",
+                    "solution": "Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+                },
+                {
+                    "question_type": "Matching names",
+                    "reason": "Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu",
+                    "solution": "Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+                },
+                {
+                    "question_type": "Which paragraph contains",
+                    "reason": "Chưa luyện đọc đủ nhiều, Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa vững ngữ pháp / hiểu cấu trúc câu",
+                    "solution": "Tăng cường luyện đọc, Học thêm từ vựng, Luyện nhận biết paraphrase, Học cách đọc hiểu câu dài dựa vào ngữ pháp"
+                }
+            ],
+            "Tốc độ đọc còn chậm": [
+                {
+                    "question_type": "Matching heading",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Tăng cường luyện đọc"
+                },
+                {
+                    "question_type": "Which paragraph contains",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Tăng cường luyện đọc"
+                }
+            ],
+            "Không hiểu được ý chính của đoạn văn": [
+                {
+                    "question_type": "Matching heading",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa luyện đọc đủ nhiều",
+                    "solution": "Học thêm từ vựng, Tăng cường luyện đọc"
+                }
+            ],
+            "Không phân biệt được False và Not Given": [
+                {
+                    "question_type": "TFNG",
+                    "reason": "Vốn từ vựng còn hạn chế, Chưa nhạy bén nhận biết paraphrase, Chưa thành thạo kỹ thuật giải đề",
+                    "solution": "Học thêm từ vựng, Luyện nhận biết paraphrase, Luyện kỹ thuật giải đề"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,115 @@
+{
+  "part1": {
+    "title": "CÁCH BẠN ĐANG HỌC IELTS LISTENING & READING",
+    "questions": [
+      {
+        "id": 1,
+        "question_text": "Khi làm bài IELTS Listening/Reading, bạn thường:",
+        "options": [
+          {
+            "text": "Làm → dò đáp án → chuyển sang đề khác",
+            "score": 0
+          },
+          {
+            "text": "Làm → dò đáp án → phân tích lỗi sai → chuyển sang đề khác",
+            "score": 1
+          },
+          {
+            "text": "Làm → dò đáp án → phân tích lỗi sai → học từ vựng → chuyển sang đề khác",
+            "score": 2
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "question_text": "Sau khi giải đề, bạn thường dành bao nhiêu phút để sửa bài và phân tích lỗi sai:",
+        "options": [
+          {
+            "text": "5-10 phút",
+            "score": 0
+          },
+          {
+            "text": "15-30 phút",
+            "score": 1
+          },
+          {
+            "text": "Trên 30 phút",
+            "score": 2
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "question_text": "Khi làm sai một câu, bạn thường:",
+        "options": [
+          {
+            "text": "Dò đáp án",
+            "score": 0
+          },
+          {
+            "text": "Dò đáp án và đọc giải thích",
+            "score": 1
+          },
+          {
+            "text": "Dò đáp án, đọc giải thích, ghi chú lại lỗi sai để rút kinh nghiệm",
+            "score": 2
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "question_text": "Bạn có trả lời được ngay lập tức kết quả giải đề Listening/Reading của bạn trong 5 đề gần đây nhất không?",
+        "options": [
+          {
+            "text": "Không nhớ",
+            "score": 0
+          },
+          {
+            "text": "Nhớ mang máng nhưng không chính xác",
+            "score": 1
+          },
+          {
+            "text": "Có, vì đã có hệ thống theo dõi kết quả giải đề",
+            "score": 2
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "question_text": "Bạn có biết trước - trong - sau khi giải đề cần làm gì để tận dụng nguồn đề không?",
+        "options": [
+          {
+            "text": "Không biết",
+            "score": 0
+          },
+          {
+            "text": "Biết nhưng áp dụng không ổn định hoặc không biết có hiệu quả không",
+            "score": 1
+          },
+          {
+            "text": "Biết và áp dụng khá đều",
+            "score": 2
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "question_text": "Nhìn chung, bạn đánh giá cách học IELTS Listening/Reading hiện tại của mình:",
+        "options": [
+          {
+            "text": "Dựa vào cảm tính khá nhiều, thấy rõ là không hiệu quả",
+            "score": 0
+          },
+          {
+            "text": "Đã hiểu cách làm bài nhưng luôn có cảm giác không biết cách tự học thêm",
+            "score": 1
+          },
+          {
+            "text": "Có chiến lược rõ ràng, biết phải làm gì",
+            "score": 2
+          }
+        ]
+      }
+    ]
+  }
+}
