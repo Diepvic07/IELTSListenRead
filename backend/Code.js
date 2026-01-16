@@ -24,7 +24,10 @@ function setup() {
     // Create sheet if not exists
     if (!sheet) {
         sheet = doc.insertSheet(SHEET_NAME);
-        // Header Row
+    }
+
+    // Add Header Row if sheet is empty
+    if (sheet.getLastRow() === 0) {
         sheet.appendRow([
             'Timestamp',
             'Name',
@@ -32,12 +35,6 @@ function setup() {
             'Phone',
             'Part 1 Score',
             'Level',
-            'Q1 Answer',
-            'Q2 Answer',
-            'Q3 Answer',
-            'Q4 Answer',
-            'Q5 Answer',
-            'Q6 Answer',
             'Opt-In Consultation',
             'Analysis Report',
             'Study Plan Link',
