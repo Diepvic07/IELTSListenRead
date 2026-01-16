@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { calculatePart1Score, getStrategyLevel, getLevelColor, getLevelDescription } from '../utils/scoring';
 import { getRecommendations, type GroupedRecommendation } from '../utils/recommendations';
@@ -6,6 +7,7 @@ import part1Data from '../data/part1_quiz.json';
 import { Download, Send, CheckCircle } from 'lucide-react';
 
 export const Results: React.FC = () => {
+    const [searchParams] = useSearchParams();
     const [part1Score, setPart1Score] = useState<number>(0);
     const [part1Answers, setPart1Answers] = useState<Record<number, number>>({});
     const [recommendations, setRecommendations] = useState<GroupedRecommendation[]>([]);
@@ -15,21 +17,36 @@ export const Results: React.FC = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
-        // Load data from storage
-        const p1AnswersStr = localStorage.getItem('part1Answers');
-        const p2ProblemsStr = localStorage.getItem('part2Problems');
+        // Check for shareable link data first
+        const urlScore = searchParams.get('score');
+        const urlProblems = searchParams.get('problems');
 
-        if (p1AnswersStr) {
-            const answers = JSON.parse(p1AnswersStr);
-            setPart1Score(calculatePart1Score(answers));
-            setPart1Answers(answers);
-        }
+        if (urlScore && urlProblems) {
+            // Load from URL (Shareable Mode)
+            const score = parseInt(urlScore, 10);
+            const problems = urlProblems.split(','); // simple comma separated list
 
-        if (p2ProblemsStr) {
-            const problems = JSON.parse(p2ProblemsStr);
+            setPart1Score(score);
             setRecommendations(getRecommendations(problems));
+            // Note: We don't have part1Answers in share mode, so detailed Q1-Q6 won't be shown/scored re-calculated from answers
+            // But we have the final score.
+        } else {
+            // Load from local storage (User taking the test)
+            const p1AnswersStr = localStorage.getItem('part1Answers');
+            const p2ProblemsStr = localStorage.getItem('part2Problems');
+
+            if (p1AnswersStr) {
+                const answers = JSON.parse(p1AnswersStr);
+                setPart1Score(calculatePart1Score(answers));
+                setPart1Answers(answers);
+            }
+
+            if (p2ProblemsStr) {
+                const problems = JSON.parse(p2ProblemsStr);
+                setRecommendations(getRecommendations(problems));
+            }
         }
-    }, []);
+    }, [searchParams]);
 
     const level = getStrategyLevel(part1Score);
     const levelColor = getLevelColor(level);
@@ -63,6 +80,7 @@ export const Results: React.FC = () => {
                 solutions: r.solutions,
                 questionTypes: r.questionTypes
             })),
+            studyPlanLink: `${window.location.origin}${import.meta.env.BASE_URL}results?score=${part1Score}&problems=${recommendations.map(r => r.problem).join(',')}` // Generate link
         };
 
         try {

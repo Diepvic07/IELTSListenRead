@@ -39,7 +39,14 @@ function setup() {
             'Q5 Answer',
             'Q6 Answer',
             'Opt-In Consultation',
-            'Analysis Report'
+            'Analysis Report',
+            'Study Plan Link',
+            'Q1 Answer',
+            'Q2 Answer',
+            'Q3 Answer',
+            'Q4 Answer',
+            'Q5 Answer',
+            'Q6 Answer'
         ]);
     }
 }
@@ -68,7 +75,7 @@ function doPost(e) {
             data = e.parameter;
         }
 
-        const { name, email, phone, part1Score, level, levelTitle, levelDescription, recommendations, optIn, problems, answers } = data;
+        const { name, email, phone, part1Score, level, levelTitle, levelDescription, recommendations, optIn, problems, answers, studyPlanLink } = data;
         const timestamp = new Date();
 
         // Generate Analysis Report Content
@@ -82,14 +89,15 @@ function doPost(e) {
             phone,
             part1Score,
             level,
+            optIn ? "Yes" : "No",
+            reportBody,
+            studyPlanLink || "",
             answers ? answers.q1 : "",
             answers ? answers.q2 : "",
             answers ? answers.q3 : "",
             answers ? answers.q4 : "",
             answers ? answers.q5 : "",
-            answers ? answers.q6 : "",
-            optIn ? "Yes" : "No",
-            reportBody
+            answers ? answers.q6 : ""
         ]);
 
         // 2. Send Email to Student
