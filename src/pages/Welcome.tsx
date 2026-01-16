@@ -13,10 +13,11 @@ export const Welcome: React.FC = () => {
                     <BookOpen className="h-10 w-10 text-primary" />
                 </div>
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">
-                    Đánh giá Chiến lược iLearn
+                    Đánh giá chiến lược luyện IELTS
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                    Khám phá phong cách học tập của bạn và tìm ra những điểm yếu tiềm ẩn trong kỹ năng Nghe & Đọc.
+                    Tìm ra những điểm yếu tiềm ẩn trong kỹ năng Nghe & Đọc.
+                    Đánh giá độ hiệu quả của chiến lược ôn luyện hiện tại.
                     Nhận kế hoạch hành động cá nhân hóa chỉ trong vài phút.
                 </p>
             </div>
@@ -25,14 +26,14 @@ export const Welcome: React.FC = () => {
                 <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                     <h3 className="font-semibold text-lg mb-2 flex items-center">
                         <span className="bg-blue-100 text-blue-700 w-6 h-6 rounded-full flex items-center justify-center text-xs mr-2">1</span>
-                        Đánh giá Chiến lược
+                        Đánh giá chiến lược
                     </h3>
                     <p className="text-gray-600 text-sm">Đánh giá thói quen học tập và chiến lược làm bài thi hiện tại của bạn.</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                     <h3 className="font-semibold text-lg mb-2 flex items-center">
                         <span className="bg-green-100 text-green-700 w-6 h-6 rounded-full flex items-center justify-center text-xs mr-2">2</span>
-                        Chẩn đoán Vấn đề
+                        Chẩn đoán vấn đề
                     </h3>
                     <p className="text-gray-600 text-sm">Xác định các thách thức cụ thể mà bạn gặp phải trong phần Nghe và Đọc.</p>
                 </div>

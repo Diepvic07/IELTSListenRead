@@ -1,16 +1,7 @@
 /**
  * IELTS Strategy Quiz - Backend Script
  * 
- * Instructions:
- * 1. Create a new Google Sheet.
- * 2. Go to Extensions > Apps Script.
- * 3. Paste this code into Code.gs (delete existing code).
- * 4. Save the project.
- * 5. Deploy -> New Deployment -> Select "Web app".
- *    - Description: "v1"
- *    - Execute as: "Me"
- *    - Who has access: "Anyone"
- * 6. Copy the "Web App URL" and use it in your React frontend.
+ * Version: 2.0 (Vietnamese Email Support)
  */
 
 // Configuration
@@ -63,23 +54,28 @@ function doPost(e) {
         }
 
         // Parse data
-        // React fetch often sends as stringified JSON in the body
         let data;
         try {
             data = JSON.parse(e.postData.contents);
         } catch (err) {
-            // Fallback for form-data if needed
             data = e.parameter;
         }
 
-        const { name, email, phone, part1Score, level, levelTitle, levelDescription, recommendations, optIn, problems, answers, studyPlanLink } = data;
+        // Destructure Payload
+        // Note: part2Analysis is the new object sent from frontend
+        const {
+            name, email, phone, part1Score, level, levelTitle, levelDescription,
+            recommendations, part2Analysis, optIn, problems, answers, studyPlanLink
+        } = data;
+
         const timestamp = new Date();
 
-        // Generate Analysis Report Content
-        const reportBody = generateReportBody(name, part1Score, level, levelTitle, levelDescription, recommendations);
+        // Generate Analysis Report Content (Vietnamese)
+        const reportBody = generateReportBodyVN(name, part1Score, level, levelTitle, levelDescription, part2Analysis);
 
-        // 1. Save to Sheet
-        sheet.appendRow([
+        // 1. Save to Sheet - Ensure robust handling of possibly missing answers
+        // Prepare array relative to headers
+        const rowData = [
             timestamp,
             name,
             email,
@@ -89,23 +85,27 @@ function doPost(e) {
             optIn ? "Yes" : "No",
             reportBody,
             studyPlanLink || "",
-            answers ? answers.q1 : "",
-            answers ? answers.q2 : "",
-            answers ? answers.q3 : "",
-            answers ? answers.q4 : "",
-            answers ? answers.q5 : "",
-            answers ? answers.q6 : ""
-        ]);
+            (answers && answers.q1) || "",
+            (answers && answers.q2) || "",
+            (answers && answers.q3) || "",
+            (answers && answers.q4) || "",
+            (answers && answers.q5) || "",
+            (answers && answers.q6) || ""
+        ];
+
+        sheet.appendRow(rowData);
 
         // 2. Send Email to Student
         sendStudentEmail(email, reportBody);
 
         // 3. Send Alert to Teacher (if Opt-In)
         if (optIn) {
-            // Problems summary for teacher quick view
-            const problemsSummary = Array.isArray(problems) ? problems.join(', ') :
-                (recommendations ? recommendations.map(r => r.problem).join(', ') : "");
-            sendTeacherAlert(name, email, phone, level, problemsSummary);
+            // Problems string fallback
+            const problemsText = problems ||
+                (part2Analysis ? Object.values(part2Analysis).flatMap(s => s.topProblems).join(', ') : "") ||
+                (recommendations ? recommendations.map(r => r.problem).join(', ') : "Không xác định");
+
+            sendTeacherAlert(name, email, phone, level, problemsText);
         }
 
         return ContentService
@@ -121,43 +121,44 @@ function doPost(e) {
     }
 }
 
-function generateReportBody(name, score, level, levelTitle, levelDescription, recommendations) {
-    // Format Part 2 Recommendations
+function generateReportBodyVN(name, score, level, levelTitle, levelDescription, part2Analysis) {
+
+    // -- Format Part 2 Analysis (Using Top 3 Lists) --
     let part2Content = "";
-    if (recommendations && recommendations.length > 0) {
-        // Group by skill
-        const listeningRecs = recommendations.filter(r => r.skill === 'Listening');
-        const readingRecs = recommendations.filter(r => r.skill === 'Reading');
 
-        if (listeningRecs.length > 0) {
-            part2Content += "Với kỹ năng Listening:\n";
-            listeningRecs.forEach(item => {
-                part2Content += `\n* Vấn đề: ${item.problem}\n`;
-                item.solutions.forEach(sol => {
-                    part2Content += `  - Giải pháp: ${sol}\n`;
-                });
-                part2Content += `  - Dạng câu hỏi nên luyện: ${item.questionTypes.join(', ')}\n`;
-            });
-            part2Content += "\n";
-        }
-
-        if (readingRecs.length > 0) {
-            part2Content += "Với kỹ năng Reading:\n";
-            readingRecs.forEach(item => {
-                part2Content += `\n* Vấn đề: ${item.problem}\n`;
-                item.solutions.forEach(sol => {
-                    part2Content += `  - Giải pháp: ${sol}\n`;
-                });
-                part2Content += `  - Dạng câu hỏi nên luyện: ${item.questionTypes.join(', ')}\n`;
-            });
-            part2Content += "\n";
-        }
+    if (!part2Analysis || (!part2Analysis.listening && !part2Analysis.reading)) {
+        part2Content = "Chưa có dữ liệu phân tích chi tiết cho phần này.\n";
     } else {
-        part2Content = "Không tìm thấy vấn đề cụ thể nào trong Phần 2.\n";
+        // Listening
+        if (part2Analysis.listening && part2Analysis.listening.topProblems && part2Analysis.listening.topProblems.length > 0) {
+            part2Content += "Với kỹ năng Listening:\n";
+            part2Content += `03 vấn đề chính của bạn với kỹ năng Listening là:\n`;
+            part2Analysis.listening.topProblems.forEach(p => part2Content += `+ ${p}\n`);
+
+            part2Content += `\n03 giải pháp chính cho kỹ năng Listening:\n`;
+            part2Analysis.listening.topSolutions.forEach(s => part2Content += `+ ${s}\n`);
+
+            part2Content += `\n03 dạng bài Listening bạn cần tập trung nhiều nhất:\n`;
+            part2Analysis.listening.topQuestionTypes.forEach(q => part2Content += `+ ${q}\n`);
+            part2Content += "\n-------------------------------------\n\n";
+        }
+
+        // Reading
+        if (part2Analysis.reading && part2Analysis.reading.topProblems && part2Analysis.reading.topProblems.length > 0) {
+            part2Content += "Với kỹ năng Reading:\n";
+            part2Content += `03 vấn đề chính của bạn với kỹ năng Reading là:\n`;
+            part2Analysis.reading.topProblems.forEach(p => part2Content += `+ ${p}\n`);
+
+            part2Content += `\n03 giải pháp cho kỹ năng Reading:\n`;
+            part2Analysis.reading.topSolutions.forEach(s => part2Content += `+ ${s}\n`);
+
+            part2Content += `\n03 dạng bài Reading bạn cần tập trung nhiều nhất:\n`;
+            part2Analysis.reading.topQuestionTypes.forEach(q => part2Content += `+ ${q}\n`);
+            part2Content += "\n";
+        }
     }
 
-    return `
-Xin chào ${name},
+    return `Xin chào ${name},
 
 Dưới đây là kết quả chi tiết từ bài Đánh giá Chiến lược IELTS của bạn tại iLearn:
 
@@ -165,7 +166,7 @@ Dưới đây là kết quả chi tiết từ bài Đánh giá Chiến lược I
 PHẦN 1 – CÁCH BẠN ĐANG HỌC IELTS LISTENING & READING
 =====================================
 Điểm số: ${score}/12
-Cấp độ: ${level} | ${levelTitle || ""}
+Cấp độ: ${levelTitle || level}
 
 ${levelDescription || ""}
 
@@ -179,8 +180,8 @@ ${part2Content}
 BƯỚC TIẾP THEO GỢI Ý CHO BẠN
 =====================================
 Trong file Checklist IELTS Cambridge, bạn có thể:
-* Tập trung giải các dạng bài còn yếu
-* Thực hành theo quy trình các bước TRƯỚC - TRONG - SAU khi giải đề để có quy trình ôn luyện hiệu quả
++ Tập trung giải các dạng bài còn yếu
++ Thực hành theo quy trình các bước TRƯỚC - TRONG - SAU khi giải đề để có quy trình ôn luyện hiệu quả
 
 Link tải tài liệu độc quyền: 
 IELTS Cambridge Checklist: https://drive.google.com/file/d/1YlDC7x4VN71ooSc4sATSmHVfjzqWDKWm/view?usp=sharing
@@ -189,7 +190,7 @@ Chúc bạn ôn luyện hiệu quả!
 
 Trân trọng,
 Phuc Ha, iLearn Teacher
-  `;
+`;
 }
 
 function sendStudentEmail(email, body) {
@@ -212,7 +213,7 @@ Họ tên: ${name}
 Email: ${email}
 SĐT: ${phone}
 Cấp độ: ${level}
-Vấn đề: ${Array.isArray(problems) ? problems.join(', ') : problems}
+Vấn đề chính: ${problems}
 
 Vui lòng liên hệ sớm.
   `;
@@ -222,66 +223,4 @@ Vui lòng liên hệ sớm.
         subject: subject,
         body: body
     });
-}
-
-// --- Debugging / Testing Function ---
-function testEmail() {
-    // Run this function from the dropdown to test email sending
-    const testStudent = "Test User";
-    const testEmail = "diepvic@gmail.com"; // Your email
-    const testScore = 8;
-    const testLevel = "Effective";
-    const testLevelTitle = "BIẾT CÁCH LÀM, NHƯNG THIẾU HỆ THỐNG";
-    const testLevelDescription = "Bạn đã hiểu rằng cần phân tích lại bài, nhưng chưa có quy trình ôn luyện hiệu quả và ổn định.";
-
-    // Mock recommendations structure
-    const testRecommendations = [
-        {
-            skill: "Listening",
-            problem: "Không theo kịp tốc độ bài nói",
-            solutions: ["Luyện nghe nhiều hơn", "Học thêm từ vựng"],
-            questionTypes: ["Gap filling", "Multiple choice"]
-        },
-        {
-            skill: "Reading",
-            problem: "Tốc độ đọc còn chậm",
-            solutions: ["Học thêm từ vựng", "Tăng cường luyện đọc"],
-            questionTypes: ["Matching heading", "Which paragraph contains"]
-        }
-    ];
-
-    const reportBody = generateReportBody(testStudent, testScore, testLevel, testLevelTitle, testLevelDescription, testRecommendations);
-    Logger.log(`Sending test email to ${testEmail}...`);
-    sendStudentEmail(testEmail, reportBody);
-    Logger.log("Email sent! Check your inbox.");
-}
-
-function testSheetFromEditor() {
-    // 1. Ensure sheet exists and has headers
-    setup();
-
-    // 2. Add a dummy row
-    const doc = SpreadsheetApp.getActiveSpreadsheet();
-    const sheet = doc.getSheetByName(SHEET_NAME);
-    const timestamp = new Date();
-
-    sheet.appendRow([
-        timestamp,
-        "Test Student via Editor",
-        "test@example.com",
-        "123456789",
-        10,
-        "Independent",
-        "Yes",
-        "Test Report Content",
-        "https://example.com/study-plan",
-        "Test Answer 1",
-        "Test Answer 2",
-        "Test Answer 3",
-        "Test Answer 4",
-        "Test Answer 5",
-        "Test Answer 6"
-    ]);
-
-    Logger.log("Test row added to 'Submissions' sheet. Check your Google Sheet!");
 }

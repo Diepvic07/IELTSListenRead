@@ -46,12 +46,13 @@ export const Part2Quiz: React.FC = () => {
             setCurrentQuestionIndex(prev => prev + 1);
         } else {
             // Finish Part 2
-            // Save data
-            // Flatten answers to just a list of problems if that's what Results page expects,
-            // OR keep structure. Requirements say "User's selected Problems".
-            // Since recommendations are keyed by Problem string, a flat list of all selected problems across all questions works best.
+            // Save detailed answers map for accurate attribution to skills
+            localStorage.setItem('part2Answers', JSON.stringify(answers));
+
+            // Legacy support / flat list if needed elsewhere (optional, but good for safety)
             const allSelectedProblems = Object.values(answers).flat();
             localStorage.setItem('part2Problems', JSON.stringify(allSelectedProblems));
+
             navigate('/results');
         }
     };

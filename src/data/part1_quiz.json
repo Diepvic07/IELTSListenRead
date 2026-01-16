@@ -58,7 +58,7 @@
       },
       {
         "id": 4,
-        "question_text": "Bạn có trả lời được ngay lập tức kết quả giải đề Listening/Reading của bạn trong 5 đề gần đây nhất không?",
+        "question_text": "Bạn có trả lời được ngay lập tức kết quả giải đề Listening/Reading của bạn (điểm của bài làm) đối với 5 đề gần đây nhất không?",
         "options": [
           {
             "text": "Không nhớ",
@@ -76,7 +76,7 @@
       },
       {
         "id": 5,
-        "question_text": "Bạn có biết trước - trong - sau khi giải đề cần làm gì để tận dụng nguồn đề không?",
+        "question_text": "Bạn có biết trước - trong - sau khi giải đề cần làm gì để tận dụng nguồn đề Listening/Reading không?",
         "options": [
           {
             "text": "Không biết",
