@@ -202,7 +202,7 @@ export const Results: React.FC = () => {
         <div className="max-w-3xl mx-auto space-y-12">
             {/* Part 1 Results */}
             <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
-                <h2 className="text-gray-500 uppercase tracking-wide text-sm font-semibold mb-2">PHẦN 1 – CÁCH BẠN ĐANG HỌC IELTS LISTENING & READING</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 uppercase border-b pb-4">PHẦN 1 – CÁCH BẠN ĐANG HỌC IELTS LISTENING & READING</h2>
                 <div className="text-5xl font-bold text-gray-900 mb-4">{part1Score} <span className="text-2xl text-gray-400 font-normal">/ 12</span></div>
 
                 {(() => {
