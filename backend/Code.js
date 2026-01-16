@@ -258,3 +258,33 @@ function testEmail() {
     sendStudentEmail(testEmail, reportBody);
     Logger.log("Email sent! Check your inbox.");
 }
+
+function testSheetFromEditor() {
+    // 1. Ensure sheet exists and has headers
+    setup();
+
+    // 2. Add a dummy row
+    const doc = SpreadsheetApp.getActiveSpreadsheet();
+    const sheet = doc.getSheetByName(SHEET_NAME);
+    const timestamp = new Date();
+
+    sheet.appendRow([
+        timestamp,
+        "Test Student via Editor",
+        "test@example.com",
+        "123456789",
+        10,
+        "Independent",
+        "Yes",
+        "Test Report Content",
+        "https://example.com/study-plan",
+        "Test Answer 1",
+        "Test Answer 2",
+        "Test Answer 3",
+        "Test Answer 4",
+        "Test Answer 5",
+        "Test Answer 6"
+    ]);
+
+    Logger.log("Test row added to 'Submissions' sheet. Check your Google Sheet!");
+}
