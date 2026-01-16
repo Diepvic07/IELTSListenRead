@@ -7,7 +7,7 @@ import { Results } from './pages/Results';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Layout>
         <Routes>
           <Route path="/" element={<Welcome />} />
