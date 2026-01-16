@@ -146,7 +146,7 @@ export const Results: React.FC = () => {
             // Replace with your actual Web App URL after deployment
             // For production, this should likely be in an env variable: import.meta.env.VITE_API_URL
             // BUT for now, we leave a placeholder or a manual instruction comment.
-            const API_URL = import.meta.env.VITE_API_URL || "https://script.google.com/macros/s/AKfycbxe7ihDA0LnFkjQ1_weWDFiziR0oeqU_IuCAHuY-UVSMG_7Q5cJH-Oko6rJijvTNbum/exec";
+            const API_URL = import.meta.env.VITE_API_URL || "https://script.google.com/macros/s/AKfycbxwaOy_VFua8ArDboeJbzi0YdbHjc0y21_9FUb5lWGtr3trEemSYgtF2goCY5KlXLQN/exec";
 
             if (!API_URL || API_URL === "YOUR_WEB_APP_URL_HERE") {
                 console.warn("API URL not set. Data not sent to backend.");
