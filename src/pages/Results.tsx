@@ -285,7 +285,7 @@ export const Results: React.FC = () => {
 
                                     <div className="space-y-6">
                                         <div>
-                                            <p className="font-bold text-gray-800 mb-2">03 vấn đề chính của bạn với kỹ năng Listening là:</p>
+                                            <p className="font-bold text-gray-800 mb-2">Các vấn đề chính của bạn với kỹ năng Listening là:</p>
                                             <ul className="space-y-1 pl-1">
                                                 {part2Analysis.listening.topProblems.map((item, idx) => (
                                                     <li key={idx} className="flex items-start text-gray-700">
@@ -297,7 +297,7 @@ export const Results: React.FC = () => {
                                         </div>
 
                                         <div>
-                                            <p className="font-bold text-gray-800 mb-2">03 giải pháp chính cho kỹ năng Listening:</p>
+                                            <p className="font-bold text-gray-800 mb-2">Các giải pháp chính cho kỹ năng Listening:</p>
                                             <ul className="space-y-1 pl-1">
                                                 {part2Analysis.listening.topSolutions.map((item, idx) => (
                                                     <li key={idx} className="flex items-start text-gray-700">
@@ -309,7 +309,7 @@ export const Results: React.FC = () => {
                                         </div>
 
                                         <div>
-                                            <p className="font-bold text-gray-800 mb-2">03 dạng bài Listening bạn cần tập trung nhiều nhất:</p>
+                                            <p className="font-bold text-gray-800 mb-2">Các dạng bài Listening bạn cần tập trung nhiều nhất:</p>
                                             <ul className="space-y-1 pl-1">
                                                 {part2Analysis.listening.topQuestionTypes.map((item, idx) => (
                                                     <li key={idx} className="flex items-start text-gray-700">
@@ -333,7 +333,7 @@ export const Results: React.FC = () => {
 
                                     <div className="space-y-6">
                                         <div>
-                                            <p className="font-bold text-gray-800 mb-2">03 vấn đề chính của bạn với kỹ năng Reading là:</p>
+                                            <p className="font-bold text-gray-800 mb-2">Các vấn đề chính của bạn với kỹ năng Reading là:</p>
                                             <ul className="space-y-1 pl-1">
                                                 {part2Analysis.reading.topProblems.map((item, idx) => (
                                                     <li key={idx} className="flex items-start text-gray-700">
@@ -345,7 +345,7 @@ export const Results: React.FC = () => {
                                         </div>
 
                                         <div>
-                                            <p className="font-bold text-gray-800 mb-2">03 giải pháp cho kỹ năng Reading:</p>
+                                            <p className="font-bold text-gray-800 mb-2">Các giải pháp cho kỹ năng Reading:</p>
                                             <ul className="space-y-1 pl-1">
                                                 {part2Analysis.reading.topSolutions.map((item, idx) => (
                                                     <li key={idx} className="flex items-start text-gray-700">
@@ -357,7 +357,7 @@ export const Results: React.FC = () => {
                                         </div>
 
                                         <div>
-                                            <p className="font-bold text-gray-800 mb-2">03 dạng bài Reading bạn cần tập trung nhiều nhất:</p>
+                                            <p className="font-bold text-gray-800 mb-2">Các dạng bài Reading bạn cần tập trung nhiều nhất:</p>
                                             <ul className="space-y-1 pl-1">
                                                 {part2Analysis.reading.topQuestionTypes.map((item, idx) => (
                                                     <li key={idx} className="flex items-start text-gray-700">

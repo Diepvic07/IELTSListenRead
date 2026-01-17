@@ -43,3 +43,24 @@ Follow these steps exactly:
 ---
 **Why is this necessary?**
 Google prevents you from identifying as someone else (spoofing). To send email as "Phuc Ha", the script must run with Phuc Ha's authenticated authority.
+
+## ⚠️ Troubleshooting: "Something went wrong" Error
+If you see a red **"Something went wrong"** popup when clicking "New Deployment":
+
+1.  **The Cause**: You are likely logged into **multiple Google Accounts** (e.g., your personal Gmail AND your work email) in the same browser window. Google Apps Script confuses which account permissions to use.
+2.  **The Fix**:
+    *   Open a **New Incognito Window** (Private Window) in your browser (`Cmd + Shift + N` on Mac).
+    *   Log in **ONLY** with Phuc Ha's account.
+    *   Open the Google Sheet/Script again.
+    *   Try the **Deploy** steps again. It should work immediately.
+
+### Still failing? (The "Nuclear" Solution)
+If it still says "Something went wrong", it is likely a permission conflict because the file was originally created by someone else.
+
+**The Fix: Create a Fresh Copy**
+1.  **Phuc Ha** creates a **New Google Sheet** (sheet.new) in his own Drive.
+2.  Go to **Extensions > Apps Script**.
+3.  **Copy & Paste** the code from the old file (or ask Diep for the `Code.js` content) into this new script.
+4.  Click **Deploy > New Deployment**.
+    *   Since Phuc Ha is the *Creator* and *Owner* of this file, the error will disappear.
+5.  Send the **NEW** Web App URL to Diep.

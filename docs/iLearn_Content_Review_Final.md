@@ -116,8 +116,8 @@ To ensure your edits can be quickly updated in the app, please follow these rule
 *   **Part 2 Header**: PHẦN 2 – LỰA CHỌN CỦA BẠN (Shows user checklist)
 *   **Analysis Header**: KẾT QUẢ PHÂN TÍCH CHI TIẾT
 *   **Analysis Format**:
-    *   Listening: 03 vấn đề chính / 03 giải pháp chính / 03 dạng bài cần tập trung
-    *   Reading: 03 vấn đề chính / 03 giải pháp chính / 03 dạng bài cần tập trung
+    *   Listening: Các vấn đề chính / Các giải pháp chính / Các dạng bài cần tập trung
+    *   Reading: Các vấn đề chính / Các giải pháp chính / Các dạng bài cần tập trung
 *   **Next Steps Header**: Bước tiếp theo gợi ý cho bạn
 *   **Lead Capture Form**:
     *   Title: Nhận Báo cáo Đầy đủ
@@ -150,27 +150,27 @@ PHẦN 2 – ĐIỂM MẠNH & YẾU CỦA BẠN KHI HỌC IELTS LISTENING/READIN
 Kết quả của bạn cho thấy:
 
 Với kỹ năng Listening:
-03 vấn đề chính của bạn với kỹ năng Listening là:
+Các vấn đề chính của bạn với kỹ năng Listening là:
 + [Vấn đề 1]
 + [Vấn đề 2]
 + ...
-03 giải pháp chính cho kỹ năng Listening:
+Các giải pháp chính cho kỹ năng Listening:
 + [Giải pháp 1]
 + [Giải pháp 2]
 + ...
-03 dạng bài Listening bạn cần tập trung nhiều nhất:
+Các dạng bài Listening bạn cần tập trung nhiều nhất:
 + [Dạng bài 1]
 + [Dạng bài 2]
 + ...
 
 Với kỹ năng Reading:
-03 vấn đề chính của bạn với kỹ năng Reading là:
+Các vấn đề chính của bạn với kỹ năng Reading là:
 + [Vấn đề 1]
 + ...
-03 giải pháp cho kỹ năng Reading:
+Các giải pháp cho kỹ năng Reading:
 + [Giải pháp 1]
 + ...
-03 dạng bài Reading bạn cần tập trung nhiều nhất:
+Các dạng bài Reading bạn cần tập trung nhiều nhất:
 + [Dạng bài 1]
 + ...
 

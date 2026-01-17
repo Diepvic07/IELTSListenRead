@@ -132,13 +132,13 @@ function generateReportBodyVN(name, score, level, levelTitle, levelDescription, 
         // Listening
         if (part2Analysis.listening && part2Analysis.listening.topProblems && part2Analysis.listening.topProblems.length > 0) {
             part2Content += "Với kỹ năng Listening:\n";
-            part2Content += `03 vấn đề chính của bạn với kỹ năng Listening là:\n`;
+            part2Content += `Các vấn đề chính của bạn với kỹ năng Listening là:\n`;
             part2Analysis.listening.topProblems.forEach(p => part2Content += `+ ${p}\n`);
 
-            part2Content += `\n03 giải pháp chính cho kỹ năng Listening:\n`;
+            part2Content += `\nCác giải pháp chính cho kỹ năng Listening:\n`;
             part2Analysis.listening.topSolutions.forEach(s => part2Content += `+ ${s}\n`);
 
-            part2Content += `\n03 dạng bài Listening bạn cần tập trung nhiều nhất:\n`;
+            part2Content += `\nCác dạng bài Listening bạn cần tập trung nhiều nhất:\n`;
             part2Analysis.listening.topQuestionTypes.forEach(q => part2Content += `+ ${q}\n`);
             part2Content += "\n-------------------------------------\n\n";
         }
@@ -146,13 +146,13 @@ function generateReportBodyVN(name, score, level, levelTitle, levelDescription, 
         // Reading
         if (part2Analysis.reading && part2Analysis.reading.topProblems && part2Analysis.reading.topProblems.length > 0) {
             part2Content += "Với kỹ năng Reading:\n";
-            part2Content += `03 vấn đề chính của bạn với kỹ năng Reading là:\n`;
+            part2Content += `Các vấn đề chính của bạn với kỹ năng Reading là:\n`;
             part2Analysis.reading.topProblems.forEach(p => part2Content += `+ ${p}\n`);
 
-            part2Content += `\n03 giải pháp cho kỹ năng Reading:\n`;
+            part2Content += `\nCác giải pháp cho kỹ năng Reading:\n`;
             part2Analysis.reading.topSolutions.forEach(s => part2Content += `+ ${s}\n`);
 
-            part2Content += `\n03 dạng bài Reading bạn cần tập trung nhiều nhất:\n`;
+            part2Content += `\nCác dạng bài Reading bạn cần tập trung nhiều nhất:\n`;
             part2Analysis.reading.topQuestionTypes.forEach(q => part2Content += `+ ${q}\n`);
             part2Content += "\n";
         }
@@ -223,4 +223,46 @@ Vui lòng liên hệ sớm.
         subject: subject,
         body: body
     });
+}
+
+// -----------------------------------------------------------------------------
+// MANUAL TEST FUNCTION
+// Run this function inside the Apps Script Editor to test Email & Sheet saving.
+// -----------------------------------------------------------------------------
+function testRun() {
+    const testPayload = {
+        name: "Test Student (Manual Run)",
+        email: "diep@ejoy.io", // Change this to your email to test receiving
+        phone: "0909090909",
+        part1Score: 8,
+        level: "Fundamental",
+        levelTitle: "BIẾT CÁCH LÀM, NHƯNG THIẾU HỆ THỐNG",
+        levelDescription: "Bạn đã hiểu rằng cần phân tích lại bài...",
+        optIn: true,
+        answers: { q1: "A", q2: "B" },
+        part2Analysis: {
+            listening: {
+                topProblems: ["Không nghe kịp", "Từ vựng yếu"],
+                topSolutions: ["Luyện nghe chép chính tả", "Học bộ từ vựng chủ đề"],
+                topQuestionTypes: ["Multiple Choice", "Map Labelling"]
+            },
+            reading: {
+                topProblems: ["Đọc không hiểu ý chính", "Thiếu từ vựng chuyên ngành"],
+                topSolutions: ["Luyện Skimming/Scanning", "Học từ vựng gốc từ"],
+                topQuestionTypes: ["True/False/Not Given", "Headings"]
+            }
+        },
+        studyPlanLink: "https://example.com/test-link"
+    };
+
+    // Simulate Post Event
+    const e = {
+        postData: {
+            contents: JSON.stringify(testPayload)
+        }
+    };
+
+    Logger.log("Starting Test Run...");
+    const result = doPost(e);
+    Logger.log("Test Result: " + result.getContent());
 }
